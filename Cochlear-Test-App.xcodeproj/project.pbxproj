@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04976D80C33363B2B5423386 /* Pods_Cochlear_Test_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A96C181BF6CBD54443EDC29 /* Pods_Cochlear_Test_App.framework */; };
+		094B8FB9290DB4790048C39B /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 094B8FB8290DB4790048C39B /* locations.json */; };
+		094B8FBB290DBB650048C39B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FBA290DBB650048C39B /* LocationService.swift */; };
+		094B8FBD290DBFDD0048C39B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FBC290DBFDD0048C39B /* BaseViewController.swift */; };
+		094B8FBF290DBFFE0048C39B /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FBE290DBFFE0048C39B /* AppRouter.swift */; };
+		094B8FC1290DC0220048C39B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FC0290DC0220048C39B /* Extensions.swift */; };
+		094B8FC3290DC05A0048C39B /* LocationsDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FC2290DC05A0048C39B /* LocationsDependencyProvider.swift */; };
+		094B8FCC290DC2E80048C39B /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FCB290DC2E80048C39B /* LocationModel.swift */; };
+		094B8FCE290DC3490048C39B /* LocationLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FCD290DC3490048C39B /* LocationLocalDataSource.swift */; };
+		094B8FD0290DC3580048C39B /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FCF290DC3580048C39B /* LocationRepository.swift */; };
+		094B8FD2290DC3730048C39B /* LocationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FD1290DC3730048C39B /* LocationUseCase.swift */; };
+		094B8FD4290DC4270048C39B /* FetchingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FD3290DC4270048C39B /* FetchingType.swift */; };
+		0974A8B6290DAB790053F48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974A8B5290DAB790053F48A /* AppDelegate.swift */; };
+		0974A8BA290DAB790053F48A /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0974A8B9290DAB790053F48A /* LocationsViewController.swift */; };
+		0974A8BD290DAB790053F48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0974A8BB290DAB790053F48A /* Main.storyboard */; };
+		0974A8BF290DAB7A0053F48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0974A8BE290DAB7A0053F48A /* Assets.xcassets */; };
+		0974A8C2290DAB7A0053F48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0974A8C0290DAB7A0053F48A /* LaunchScreen.storyboard */; };
+		09A9DBDE2915CFCA00E9DE2B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBDD2915CFCA00E9DE2B /* LocationTableViewCell.swift */; };
+		09AD7A2F290F12A50011EC79 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		094B8FB8290DB4790048C39B /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		094B8FBA290DBB650048C39B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		094B8FBC290DBFDD0048C39B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		094B8FBE290DBFFE0048C39B /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		094B8FC0290DC0220048C39B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		094B8FC2290DC05A0048C39B /* LocationsDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDependencyProvider.swift; sourceTree = "<group>"; };
+		094B8FCB290DC2E80048C39B /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		094B8FCD290DC3490048C39B /* LocationLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLocalDataSource.swift; sourceTree = "<group>"; };
+		094B8FCF290DC3580048C39B /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		094B8FD1290DC3730048C39B /* LocationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUseCase.swift; sourceTree = "<group>"; };
+		094B8FD3290DC4270048C39B /* FetchingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingType.swift; sourceTree = "<group>"; };
+		0974A8B2290DAB790053F48A /* Cochlear-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cochlear-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0974A8B5290DAB790053F48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0974A8B9290DAB790053F48A /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		0974A8BC290DAB790053F48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0974A8BE290DAB7A0053F48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0974A8C1290DAB7A0053F48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0974A8C3290DAB7A0053F48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A9DBDD2915CFCA00E9DE2B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		104248B969C714DA7735D27A /* Pods-Cochlear-Test-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cochlear-Test-App.debug.xcconfig"; path = "Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App.debug.xcconfig"; sourceTree = "<group>"; };
+		1383127B157CEB9F572B1F5F /* Pods-Cochlear-Test-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cochlear-Test-App.release.xcconfig"; path = "Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App.release.xcconfig"; sourceTree = "<group>"; };
+		8A96C181BF6CBD54443EDC29 /* Pods_Cochlear_Test_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cochlear_Test_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0974A8AF290DAB790053F48A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04976D80C33363B2B5423386 /* Pods_Cochlear_Test_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094B8FC4290DC0870048C39B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				09A9DBDD2915CFCA00E9DE2B /* LocationTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		094B8FC5290DC08F0048C39B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8B9290DAB790053F48A /* LocationsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0974A8A9290DAB790053F48A = {
+			isa = PBXGroup;
+			children = (
+				0974A8B4290DAB790053F48A /* Cochlear-Test-App */,
+				0974A8B3290DAB790053F48A /* Products */,
+				7B44B6ACE24BB8889709B5F8 /* Pods */,
+				0E974CD489C44F4684AD0A32 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0974A8B3290DAB790053F48A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8B2290DAB790053F48A /* Cochlear-Test-App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0974A8B4290DAB790053F48A /* Cochlear-Test-App */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8D0290DACA90053F48A /* Application */,
+				0974A8CF290DACA30053F48A /* DBManager */,
+				0974A8CE290DAC9E0053F48A /* Resources */,
+				0974A8CC290DABEB0053F48A /* LocationManager */,
+				0974A8CB290DABE40053F48A /* Utilities */,
+				0974A8CA290DABDE0053F48A /* Storyboards */,
+				0974A8C9290DABD60053F48A /* Modules */,
+			);
+			path = "Cochlear-Test-App";
+			sourceTree = "<group>";
+		};
+		0974A8C9290DABD60053F48A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8D4290DAD270053F48A /* DependencyProvider */,
+				0974A8D3290DAD210053F48A /* Data */,
+				0974A8D2290DAD180053F48A /* Domain */,
+				0974A8D1290DAD060053F48A /* Presentation */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0974A8CA290DABDE0053F48A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8C0290DAB7A0053F48A /* LaunchScreen.storyboard */,
+				0974A8BB290DAB790053F48A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0974A8CB290DABE40053F48A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FBC290DBFDD0048C39B /* BaseViewController.swift */,
+				094B8FBE290DBFFE0048C39B /* AppRouter.swift */,
+				094B8FC0290DC0220048C39B /* Extensions.swift */,
+				094B8FD3290DC4270048C39B /* FetchingType.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0974A8CC290DABEB0053F48A /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FBA290DBB650048C39B /* LocationService.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		0974A8CE290DAC9E0053F48A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FB8290DB4790048C39B /* locations.json */,
+				0974A8BE290DAB7A0053F48A /* Assets.xcassets */,
+				0974A8C3290DAB7A0053F48A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0974A8CF290DACA30053F48A /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		0974A8D0290DACA90053F48A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8B5290DAB790053F48A /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0974A8D1290DAD060053F48A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8D8290DAE0A0053F48A /* View */,
+				0974A8D7290DAE040053F48A /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0974A8D2290DAD180053F48A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8DA290DAE2B0053F48A /* UseCase */,
+				0974A8D9290DAE250053F48A /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0974A8D3290DAD210053F48A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8DC290DAE480053F48A /* DataSource */,
+				0974A8DB290DAE390053F48A /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0974A8D4290DAD270053F48A /* DependencyProvider */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FC2290DC05A0048C39B /* LocationsDependencyProvider.swift */,
+			);
+			path = DependencyProvider;
+			sourceTree = "<group>";
+		};
+		0974A8D7290DAE040053F48A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		0974A8D8290DAE0A0053F48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FC5290DC08F0048C39B /* ViewControllers */,
+				094B8FC4290DC0870048C39B /* TableViewCells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0974A8D9290DAE250053F48A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FCB290DC2E80048C39B /* LocationModel.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		0974A8DA290DAE2B0053F48A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FD1290DC3730048C39B /* LocationUseCase.swift */,
+			);
+			name = UseCase;
+			sourceTree = "<group>";
+		};
+		0974A8DB290DAE390053F48A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FCF290DC3580048C39B /* LocationRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		0974A8DC290DAE480053F48A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0974A8DE290DAE560053F48A /* Local */,
+				0974A8DD290DAE520053F48A /* Remote */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		0974A8DD290DAE520053F48A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		0974A8DE290DAE560053F48A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				094B8FCD290DC3490048C39B /* LocationLocalDataSource.swift */,
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		0E974CD489C44F4684AD0A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A96C181BF6CBD54443EDC29 /* Pods_Cochlear_Test_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B44B6ACE24BB8889709B5F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				104248B969C714DA7735D27A /* Pods-Cochlear-Test-App.debug.xcconfig */,
+				1383127B157CEB9F572B1F5F /* Pods-Cochlear-Test-App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0974A8B1290DAB790053F48A /* Cochlear-Test-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0974A8C6290DAB7A0053F48A /* Build configuration list for PBXNativeTarget "Cochlear-Test-App" */;
+			buildPhases = (
+				3D568CFD07AF33B71FB90BE7 /* [CP] Check Pods Manifest.lock */,
+				0974A8AE290DAB790053F48A /* Sources */,
+				0974A8AF290DAB790053F48A /* Frameworks */,
+				0974A8B0290DAB790053F48A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cochlear-Test-App";
+			productName = "Cochlear-Test-App";
+			productReference = 0974A8B2290DAB790053F48A /* Cochlear-Test-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0974A8AA290DAB790053F48A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					0974A8B1290DAB790053F48A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 0974A8AD290DAB790053F48A /* Build configuration list for PBXProject "Cochlear-Test-App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0974A8A9290DAB790053F48A;
+			productRefGroup = 0974A8B3290DAB790053F48A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0974A8B1290DAB790053F48A /* Cochlear-Test-App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0974A8B0290DAB790053F48A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0974A8C2290DAB7A0053F48A /* LaunchScreen.storyboard in Resources */,
+				0974A8BF290DAB7A0053F48A /* Assets.xcassets in Resources */,
+				094B8FB9290DB4790048C39B /* locations.json in Resources */,
+				0974A8BD290DAB790053F48A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D568CFD07AF33B71FB90BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cochlear-Test-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0974A8AE290DAB790053F48A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				094B8FD0290DC3580048C39B /* LocationRepository.swift in Sources */,
+				0974A8BA290DAB790053F48A /* LocationsViewController.swift in Sources */,
+				094B8FBD290DBFDD0048C39B /* BaseViewController.swift in Sources */,
+				0974A8B6290DAB790053F48A /* AppDelegate.swift in Sources */,
+				094B8FD2290DC3730048C39B /* LocationUseCase.swift in Sources */,
+				094B8FC1290DC0220048C39B /* Extensions.swift in Sources */,
+				094B8FBF290DBFFE0048C39B /* AppRouter.swift in Sources */,
+				094B8FC3290DC05A0048C39B /* LocationsDependencyProvider.swift in Sources */,
+				09A9DBDE2915CFCA00E9DE2B /* LocationTableViewCell.swift in Sources */,
+				094B8FD4290DC4270048C39B /* FetchingType.swift in Sources */,
+				094B8FBB290DBB650048C39B /* LocationService.swift in Sources */,
+				094B8FCC290DC2E80048C39B /* LocationModel.swift in Sources */,
+				094B8FCE290DC3490048C39B /* LocationLocalDataSource.swift in Sources */,
+				09AD7A2F290F12A50011EC79 /* LocationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0974A8BB290DAB790053F48A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0974A8BC290DAB790053F48A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0974A8C0290DAB7A0053F48A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0974A8C1290DAB7A0053F48A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0974A8C4290DAB7A0053F48A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0974A8C5290DAB7A0053F48A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0974A8C7290DAB7A0053F48A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104248B969C714DA7735D27A /* Pods-Cochlear-Test-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XML5929TVD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cochlear-Test-App/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "faraz.Cochlear-Test-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0974A8C8290DAB7A0053F48A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1383127B157CEB9F572B1F5F /* Pods-Cochlear-Test-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XML5929TVD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Cochlear-Test-App/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "faraz.Cochlear-Test-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0974A8AD290DAB790053F48A /* Build configuration list for PBXProject "Cochlear-Test-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0974A8C4290DAB7A0053F48A /* Debug */,
+				0974A8C5290DAB7A0053F48A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0974A8C6290DAB7A0053F48A /* Build configuration list for PBXNativeTarget "Cochlear-Test-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0974A8C7290DAB7A0053F48A /* Debug */,
+				0974A8C8290DAB7A0053F48A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0974A8AA290DAB790053F48A /* Project object */;
+}

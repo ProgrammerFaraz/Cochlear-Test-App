@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04976D80C33363B2B5423386 /* Pods_Cochlear_Test_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A96C181BF6CBD54443EDC29 /* Pods_Cochlear_Test_App.framework */; };
+		090B391329182917002395FB /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B391229182917002395FB /* AppDefaults.swift */; };
 		094B8FB9290DB4790048C39B /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 094B8FB8290DB4790048C39B /* locations.json */; };
 		094B8FBB290DBB650048C39B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FBA290DBB650048C39B /* LocationService.swift */; };
 		094B8FBD290DBFDD0048C39B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094B8FBC290DBFDD0048C39B /* BaseViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090B391229182917002395FB /* AppDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
 		094B8FB8290DB4790048C39B /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		094B8FBA290DBB650048C39B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		094B8FBC290DBFDD0048C39B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				094B8FBE290DBFFE0048C39B /* AppRouter.swift */,
 				094B8FC0290DC0220048C39B /* Extensions.swift */,
 				094B8FD3290DC4270048C39B /* FetchingType.swift */,
+				090B391229182917002395FB /* AppDefaults.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A9DBE42915D85200E9DE2B /* LocationDetailViewModel.swift in Sources */,
+				090B391329182917002395FB /* AppDefaults.swift in Sources */,
 				094B8FD0290DC3580048C39B /* LocationRepository.swift in Sources */,
 				0974A8BA290DAB790053F48A /* LocationsViewController.swift in Sources */,
 				094B8FBD290DBFDD0048C39B /* BaseViewController.swift in Sources */,

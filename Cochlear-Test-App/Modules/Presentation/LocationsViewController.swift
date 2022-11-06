@@ -19,17 +19,19 @@ class LocationsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
+        addTapGestureOnMap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        updateLocations()
+        getLocations()
     }
     
     private func bindViewModel() {
         
         viewModel?.onSuccessFromJSON = { [weak self] in
             guard let self = self else { return }
-            self.updateLocations()
+            AppDefaults.isNotFirstTime = true
+            self.getLocations()
         }
         
         viewModel?.onErrorFromJSON = { [weak self] error in
@@ -42,8 +44,34 @@ class LocationsViewController: BaseViewController {
         }
     }
     
-    private func updateLocations() {
-        self.viewModel?.getLocationsFromLocal()
+    private func addTapGestureOnMap() {
+        let gestureRecognizer = UITapGestureRecognizer(
+            target: self, action:#selector(handleTap))
+//        gestureRecognizer.delegate = self
+        mapView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        
+        let location = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        
+        // Add annotation:
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
+    }
+
+    private func getLocations() {
+        if AppDefaults.isNotFirstTime {
+            self.viewModel?.getLocationsFromLocal()
+            reloadData()
+            return
+        }
+        self.viewModel?.getLocationsFromJSON()
+    }
+    
+    private func reloadData() {
         self.tableView.reloadData()
         self.addAnnotation(locations: self.viewModel?.locations)
     }

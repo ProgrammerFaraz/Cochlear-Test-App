@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 protocol LocationViewModel {
-    func getLocations()
+    func getLocationsFromJSON()
 }
 
 class DefaultLocationViewModel: LocationViewModel {
@@ -29,10 +29,9 @@ class DefaultLocationViewModel: LocationViewModel {
         self.locationUseCase = locationUseCase
         self.locationService = locationService
         self.locationService.delegate = self
-        getLocations()
     }
 
-    func getLocations() {
+    func getLocationsFromJSON() {
         locationUseCase.getLocationsFromJSON(method: .local) { [weak self] errorMsg in
             guard let self = self else { return }
             if let errorMsg = errorMsg {

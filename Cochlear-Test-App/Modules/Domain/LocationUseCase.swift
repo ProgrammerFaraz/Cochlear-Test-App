@@ -26,13 +26,10 @@ class DefaultLocationUseCase: LocationUseCase {
     /// Method to fetch locations from JSON
     func getLocationsFromJSON(method: FetchingType, completion: @escaping (String?) -> ()) {
         locationRepository.getLocationsFromJSON(from: method) { [weak self] response, errorMsg in
-            if let errorMsg = errorMsg {
-                completion(errorMsg)
-                return
-            }
             if let locations = response?.locations {
                 self?.addLocationToLocal(locations: locations)
             }
+            completion(errorMsg)
         }
     }
     

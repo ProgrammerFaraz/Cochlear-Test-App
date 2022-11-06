@@ -66,14 +66,18 @@ class LocationsViewController: BaseViewController {
         let viewRegion = MKCoordinateRegion(center: coordinates, latitudinalMeters: 2000, longitudinalMeters: 2000)
         self.mapView.setRegion(viewRegion, animated: true)
     }
+    
+    private func navigateToDetailScreen(location: Location) {
+        if let vc = LocationDetailDependencyProvider.viewController {
+            vc.location = location
+            self.route(to: vc, navigation: .push)
+        }
+    }
 }
 
 extension LocationsViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        if let vc = LocationDetailDependencyProvider.viewController {
-            vc.location = Location(name: (view.annotation?.title ?? "") ?? "", lat: view.annotation?.coordinate.latitude ?? 0.0, lng: view.annotation?.coordinate.longitude ?? 0.0)
-            self.route(to: vc, navigation: .push)
-        }
+        navigateToDetailScreen(location: Location(name: (view.annotation?.title ?? "") ?? "", lat: view.annotation?.coordinate.latitude ?? 0.0, lng: view.annotation?.coordinate.longitude ?? 0.0))
     }
 }
 
@@ -92,5 +96,6 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else { return }
         setRegion(coordinates: CLLocationCoordinate2D(latitude: Double(viewModel.locations[indexPath.row].latitude ?? "0.0") ?? 0.0, longitude: Double(viewModel.locations[indexPath.row].longitude ?? "0.0") ?? 0.0))
+        navigateToDetailScreen(location: Location(name: viewModel.locations[indexPath.row].locationName ?? "", lat: Double(viewModel.locations[indexPath.row].latitude ?? "0.0") ?? 0.0, lng: Double(viewModel.locations[indexPath.row].longitude ?? "0.0") ?? 0.0))
     }
 }

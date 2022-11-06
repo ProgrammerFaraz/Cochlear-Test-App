@@ -42,15 +42,7 @@ class DBManager {
     }
     
     func addData(object: RealmLocationModel, message: String = "") {
-        if !DBManager.shared.isEmpty() {
-            if !(DBManager.shared.getDataFromDB().contains(where: { locationModel in
-                locationModel.locationName == object.locationName
-            })) {
-                writeToDB(with: object, message: message)
-            }
-        } else {
-            writeToDB(with: object, message: message)
-        }
+        writeToDB(with: object, message: message)
     }
     
     @discardableResult
@@ -60,7 +52,8 @@ class DBManager {
                 object.notes = message
                 database.add(object, update: .all)
             }
-        } catch {
+        } catch let error {
+            print(error)
             return false
         }
         return true

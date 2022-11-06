@@ -43,9 +43,9 @@ class LocationDetailViewController: BaseViewController {
     }
     
     private func updateUITexts() {
-        self.locationNameLabel.text = viewModel?.location?.locationName ?? "-"
-        self.latitudeLabel.text = viewModel?.location?.latitude ?? "-"
-        self.longitudeLabel.text = viewModel?.location?.longitude ?? "-"
+        self.locationNameLabel.text = "Name: \(viewModel?.location?.locationName ?? "-")"
+        self.latitudeLabel.text = "Latitude: \(viewModel?.location?.latitude ?? "-")"
+        self.longitudeLabel.text = "Longitude: \(viewModel?.location?.longitude ?? "-")"
         self.notesTextfield.text = viewModel?.location?.notes
     }
     

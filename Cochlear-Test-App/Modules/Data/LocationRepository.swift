@@ -34,4 +34,18 @@ class LocationRepository {
             print("Loading from local DB here")
         }
     }
+    
+    func getAllLocations() -> [RealmLocationModel] {
+        return localDataSource.fetchAllLocations()
+    }
+    
+    func getLocationDetails(with name: String, from method: FetchingType) -> [RealmLocationModel]? {
+        switch method {
+        case .local:
+            return localDataSource.fetchLocationDetails(with: name)
+        default: break
+        }
+        return nil
+    }
+
 }

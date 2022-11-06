@@ -6,5 +6,6 @@ target 'Cochlear-Test-App' do
   use_frameworks!
 
   # Pods for Cochlear-Test-App
+  pod 'RealmSwift'
 
 end

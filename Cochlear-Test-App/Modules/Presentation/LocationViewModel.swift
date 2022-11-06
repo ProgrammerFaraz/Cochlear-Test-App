@@ -17,7 +17,7 @@ class DefaultLocationViewModel: LocationViewModel {
     //MARK: - PROPERTIES
     private var locationUseCase: LocationUseCase
     var locationService: LocationService
-    var locations = [Location]()
+    var locations = [RealmLocationModel]()
     
     //MARK: - CALLBACKS
     var sendCoordinatesToView: ((CLLocationCoordinate2D) -> Void)?
@@ -29,20 +29,22 @@ class DefaultLocationViewModel: LocationViewModel {
         self.locationUseCase = locationUseCase
         self.locationService = locationService
         self.locationService.delegate = self
+        getLocations()
     }
 
     func getLocations() {
-        locationUseCase.getLocationsFromJSON(method: .local) { [weak self] response, errorMsg in
-            guard let self = self,
-                  let response = response
-            else { return }
+        locationUseCase.getLocationsFromJSON(method: .local) { [weak self] errorMsg in
+            guard let self = self else { return }
             if let errorMsg = errorMsg {
                 self.onErrorFromJSON?(errorMsg)
                 return
             }
-            self.locations = response.locations
             self.onSuccessFromJSON?()
         }
+    }
+    
+    func getLocationsFromLocal() {
+        self.locations = locationUseCase.getAllLocations()
     }
 }
 

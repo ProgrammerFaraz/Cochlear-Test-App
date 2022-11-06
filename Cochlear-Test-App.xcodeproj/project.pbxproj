@@ -25,6 +25,11 @@
 		0974A8BF290DAB7A0053F48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0974A8BE290DAB7A0053F48A /* Assets.xcassets */; };
 		0974A8C2290DAB7A0053F48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0974A8C0290DAB7A0053F48A /* LaunchScreen.storyboard */; };
 		09A9DBDE2915CFCA00E9DE2B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBDD2915CFCA00E9DE2B /* LocationTableViewCell.swift */; };
+		09A9DBE02915D69500E9DE2B /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBDF2915D69500E9DE2B /* LocationDetailViewController.swift */; };
+		09A9DBE22915D7E700E9DE2B /* LocationDetailDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBE12915D7E700E9DE2B /* LocationDetailDependencyProvider.swift */; };
+		09A9DBE42915D85200E9DE2B /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBE32915D85200E9DE2B /* LocationDetailViewModel.swift */; };
+		09A9DBE82917E6B100E9DE2B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBE72917E6B100E9DE2B /* DBManager.swift */; };
+		09A9DBEA2917E6CA00E9DE2B /* RealmLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A9DBE92917E6CA00E9DE2B /* RealmLocationModel.swift */; };
 		09AD7A2F290F12A50011EC79 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		0974A8C1290DAB7A0053F48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0974A8C3290DAB7A0053F48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A9DBDD2915CFCA00E9DE2B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		09A9DBDF2915D69500E9DE2B /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		09A9DBE12915D7E700E9DE2B /* LocationDetailDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailDependencyProvider.swift; sourceTree = "<group>"; };
+		09A9DBE32915D85200E9DE2B /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
+		09A9DBE72917E6B100E9DE2B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		09A9DBE92917E6CA00E9DE2B /* RealmLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLocationModel.swift; sourceTree = "<group>"; };
 		09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		104248B969C714DA7735D27A /* Pods-Cochlear-Test-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cochlear-Test-App.debug.xcconfig"; path = "Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App.debug.xcconfig"; sourceTree = "<group>"; };
 		1383127B157CEB9F572B1F5F /* Pods-Cochlear-Test-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cochlear-Test-App.release.xcconfig"; path = "Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0974A8B9290DAB790053F48A /* LocationsViewController.swift */,
+				09A9DBDF2915D69500E9DE2B /* LocationDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +177,8 @@
 		0974A8CF290DACA30053F48A /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
+				09A9DBE72917E6B100E9DE2B /* DBManager.swift */,
+				09A9DBE92917E6CA00E9DE2B /* RealmLocationModel.swift */,
 			);
 			path = DBManager;
 			sourceTree = "<group>";
@@ -209,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				094B8FC2290DC05A0048C39B /* LocationsDependencyProvider.swift */,
+				09A9DBE12915D7E700E9DE2B /* LocationDetailDependencyProvider.swift */,
 			);
 			path = DependencyProvider;
 			sourceTree = "<group>";
@@ -217,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				09AD7A2E290F12A50011EC79 /* LocationViewModel.swift */,
+				09A9DBE32915D85200E9DE2B /* LocationDetailViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +321,7 @@
 				0974A8AE290DAB790053F48A /* Sources */,
 				0974A8AF290DAB790053F48A /* Frameworks */,
 				0974A8B0290DAB790053F48A /* Resources */,
+				F55633705372346E30A7CA5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +402,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F55633705372346E30A7CA5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cochlear-Test-App/Pods-Cochlear-Test-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -393,17 +426,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A9DBE42915D85200E9DE2B /* LocationDetailViewModel.swift in Sources */,
 				094B8FD0290DC3580048C39B /* LocationRepository.swift in Sources */,
 				0974A8BA290DAB790053F48A /* LocationsViewController.swift in Sources */,
 				094B8FBD290DBFDD0048C39B /* BaseViewController.swift in Sources */,
 				0974A8B6290DAB790053F48A /* AppDelegate.swift in Sources */,
+				09A9DBE02915D69500E9DE2B /* LocationDetailViewController.swift in Sources */,
 				094B8FD2290DC3730048C39B /* LocationUseCase.swift in Sources */,
 				094B8FC1290DC0220048C39B /* Extensions.swift in Sources */,
+				09A9DBE22915D7E700E9DE2B /* LocationDetailDependencyProvider.swift in Sources */,
 				094B8FBF290DBFFE0048C39B /* AppRouter.swift in Sources */,
 				094B8FC3290DC05A0048C39B /* LocationsDependencyProvider.swift in Sources */,
 				09A9DBDE2915CFCA00E9DE2B /* LocationTableViewCell.swift in Sources */,
 				094B8FD4290DC4270048C39B /* FetchingType.swift in Sources */,
+				09A9DBE82917E6B100E9DE2B /* DBManager.swift in Sources */,
 				094B8FBB290DBB650048C39B /* LocationService.swift in Sources */,
+				09A9DBEA2917E6CA00E9DE2B /* RealmLocationModel.swift in Sources */,
 				094B8FCC290DC2E80048C39B /* LocationModel.swift in Sources */,
 				094B8FCE290DC3490048C39B /* LocationLocalDataSource.swift in Sources */,
 				09AD7A2F290F12A50011EC79 /* LocationViewModel.swift in Sources */,

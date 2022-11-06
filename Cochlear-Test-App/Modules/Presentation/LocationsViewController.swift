@@ -19,14 +19,17 @@ class LocationsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
-        viewModel?.getLocations()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateLocations()
     }
     
     private func bindViewModel() {
         
         viewModel?.onSuccessFromJSON = { [weak self] in
-            self?.addAnnotation(locations: self?.viewModel?.locations)
+            guard let self = self else { return }
+            self.updateLocations()
         }
         
         viewModel?.onErrorFromJSON = { [weak self] error in
@@ -39,21 +42,24 @@ class LocationsViewController: BaseViewController {
         }
     }
     
-    private func setupLocations() {
-        mapView.showsUserLocation = true
+    private func updateLocations() {
+        self.viewModel?.getLocationsFromLocal()
+        self.tableView.reloadData()
+        self.addAnnotation(locations: self.viewModel?.locations)
     }
     
-    private func addAnnotation(locations: [Location]?) {
+    private func addAnnotation(locations: [RealmLocationModel]?) {
         guard let locations = locations else {
             return
         }
         for location in locations {
             let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(location.lat, location.lng)
-            annotation.title = location.name
+            annotation.coordinate = CLLocationCoordinate2DMake(Double(location.latitude ?? "") ?? 0.0, Double(location.longitude ?? "") ?? 0.0)
+            annotation.title = location.locationName
+            annotation.subtitle = location.notes
             self.mapView.addAnnotation(annotation)
         }
-        setRegion(coordinates: CLLocationCoordinate2D(latitude: locations.last?.lat ?? 0.0, longitude: locations.last?.lng ?? 0.0))
+        setRegion(coordinates: CLLocationCoordinate2D(latitude: Double(locations.last?.latitude ?? "") ?? 0.0, longitude: Double(locations.last?.longitude ?? "") ?? 0.0))
     }
     
     private func setRegion(coordinates: CLLocationCoordinate2D) {
@@ -63,7 +69,12 @@ class LocationsViewController: BaseViewController {
 }
 
 extension LocationsViewController: MKMapViewDelegate {
-    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let vc = LocationDetailDependencyProvider.viewController {
+            vc.location = Location(name: (view.annotation?.title ?? "") ?? "", lat: view.annotation?.coordinate.latitude ?? 0.0, lng: view.annotation?.coordinate.longitude ?? 0.0)
+            self.route(to: vc, navigation: .push)
+        }
+    }
 }
 
 extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -74,12 +85,12 @@ extension LocationsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LocationTableViewCell.identifier) as? LocationTableViewCell else { return UITableViewCell() }
-        cell.configure(location: viewModel?.locations[indexPath.row].name ?? "")
+        cell.configure(location: viewModel?.locations[indexPath.row].locationName ?? "")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else { return }
-        setRegion(coordinates: CLLocationCoordinate2D(latitude: viewModel.locations[indexPath.row].lat, longitude: viewModel.locations[indexPath.row].lng))
+        setRegion(coordinates: CLLocationCoordinate2D(latitude: Double(viewModel.locations[indexPath.row].latitude ?? "0.0") ?? 0.0, longitude: Double(viewModel.locations[indexPath.row].longitude ?? "0.0") ?? 0.0))
     }
 }

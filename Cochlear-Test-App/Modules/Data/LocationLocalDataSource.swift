@@ -25,5 +25,14 @@ struct LocationLocalDataSource {
             }
         }
     }
+    
+    func fetchAllLocations() -> [RealmLocationModel] {
+        DBManager.shared.getAllData()
+        
+    }
+    
+    func fetchLocationDetails(with name: String) -> [RealmLocationModel] {
+        DBManager.shared.getData(with: name)
+    }
 
 }

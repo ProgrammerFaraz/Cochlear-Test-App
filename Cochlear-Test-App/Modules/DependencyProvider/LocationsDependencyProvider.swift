@@ -1,5 +1,5 @@
 //
-//  MapVCDependencyProvider.swift
+//  LocationsDependencyProvider.swift
 //  Cochlear-Test-App
 //
 //  Created by Faraz Ahmed Khan on 30/10/2022.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-/// Dependency resolver for MapVC module
-struct MapVCDependencyProvider {
+/// Dependency resolver for Locations module
+struct LocationsDependencyProvider {
     
     /// Resolved Repository
     static var locationRepository: LocationRepository {
@@ -35,18 +35,21 @@ struct MapVCDependencyProvider {
     }
 
     /// Resolved ViewController
-    static var viewController: UIViewController {
+    static var viewController: LocationsViewController? {
         guard let vc = Storyboards.main.instantiateVC(LocationsViewController.self) else {
-            return UIViewController()
+            return nil
         }
         vc.viewModel = viewModel
         return vc
     }
     
     /// Resolved NavigationController
-    static var navigationController: UINavigationController {
+    static var navigationController: UINavigationController? {
+        guard let vc = self.viewController else {
+            return nil
+        }
         let navVC = UINavigationController()
-        navVC.viewControllers = [self.viewController]
+        navVC.viewControllers = [vc]
         return navVC
     }
 
